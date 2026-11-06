@@ -1,0 +1,15 @@
+# dsh-rest bundle patch：把插件行插入所在 profile 的插件清单。
+#
+# 单行同时挂载两半：
+#   - 宿主端（lib/index.js）：计时器、/api/dsh-rest/* 路由、Windows Toast 兜底；
+#   - 浏览器端（lib/client.js）：轮询状态、弹 dsh 内提示与浏览器系统通知。
+#
+# 安装方式见 README.md。按需在行上追加 config 覆盖默认设置，例如：
+#   - insert:
+#       - id: rest-reminder
+#         name: 'dsh-rest'
+#         config:
+#           intervalMinutes: 45
+- insert:
+    - id: rest-reminder
+      name: 'dsh-rest'
